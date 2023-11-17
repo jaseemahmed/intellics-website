@@ -6,7 +6,7 @@ import bgGif from "../src/assets/images/bg-gif.gif";
 function App() {
   return (
     <Container maxWidth="xl">
-      <Grid container sx={{ minHeight: "100vh" }}>
+      <Grid container sx={{ minHeight: "calc(100vh - 20px)" }}>
         <Grid item xs={4} md={2}>
           <Box>
             <img width="100%" src={logo} alt="logo" />
