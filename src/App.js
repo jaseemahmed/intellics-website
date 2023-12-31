@@ -44,11 +44,11 @@ function App() {
           // padding: "0 !important",
           backgroundColor: "primary.main",
           backgroundImage: `url(${bgImg})`,
-          // backgroundSize: isMobileSmall
-          //   ? "200%"
-          //   : isMobile
-          //   ? "150%"
-          //   : "contain",
+          backgroundSize: isMobileSmall
+            ? "200%"
+            : isMobile
+            ? "150%"
+            : "contain",
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "bottom right",
