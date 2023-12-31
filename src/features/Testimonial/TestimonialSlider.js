@@ -11,7 +11,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import dotsbg from "../../assets/images/dots.svg";
 import { motion } from "framer-motion";
-const TestimonialSlider = ({ data }) => {
+const TestimonialSlider = ({ data, isMobile }) => {
   const [slide, setSlide] = useState(0);
   const nextSlide = (e) => {
     e.preventDefault();
@@ -46,9 +46,9 @@ const TestimonialSlider = ({ data }) => {
       <Grid container sx={{ alignItems: "center" }}>
         <Grid item xs={12} md={4}>
           <Box
-            sx={{ textAlign: "center" }}
-            component={motion.div}
-            animate={{ scale: 1.2 }}
+            sx={{
+              textAlign: "center",
+            }}
           >
             {data.map((item, idx) => (
               <motion.div
@@ -59,20 +59,21 @@ const TestimonialSlider = ({ data }) => {
                 }}
                 exit={{ opacity: 0, y: -50 }}
                 transition={{ duration: 0.5 }}
+                key={idx}
               >
                 <Box
                   sx={{
                     display: slide === idx ? "block" : "none",
-                    "& img": { borderRadius: "2rem" },
+                    "& img": {
+                      borderRadius: "2rem",
+                      maxWidth: "100%",
+                      transform: !!isMobile ? "scale(1)" : "scale(1.2)",
+                    },
+                    maxWidth: "100%",
                   }}
                   key={idx}
                 >
-                  <img
-                    width="200px"
-                    height="300px"
-                    src={item.image}
-                    alt={item.altText}
-                  />
+                  <img width="200px" src={item.image} alt={item.altText} />
                 </Box>
               </motion.div>
             ))}
@@ -94,6 +95,7 @@ const TestimonialSlider = ({ data }) => {
                 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.5 }}
+                key={idx}
               >
                 <Box
                   key={idx}
@@ -107,7 +109,10 @@ const TestimonialSlider = ({ data }) => {
                     {item.clientName}
                   </Typography>
                   <Typography variant="h6" color="text.white" gutterBottom>
-                    {item.position} | {item.company}
+                    {item.position}
+                  </Typography>
+                  <Typography variant="body1" color="text.white" gutterBottom>
+                    {item.company}
                   </Typography>
                   <Typography
                     variant="body1"

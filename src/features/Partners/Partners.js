@@ -9,54 +9,54 @@ import aws from "../../assets/images/aws.svg";
 
 const Partners = () => {
   return (
-    <Grid container>
+    <Grid container >
       <Grid
         item
-        xs={12}
+        xs={6}
         md={2}
-        sx={{ display: "flex", justifyContent: "center" }}
+        sx={{ display: "flex", justifyContent: "center", padding: '2rem' }}
       >
-        <img src={microsoft} alt="microsoft partner" />
+        <img width="100%" src={microsoft} alt="microsoft partner" />
       </Grid>
       <Grid
         item
-        xs={12}
+        xs={6}
         md={2}
-        sx={{ display: "flex", justifyContent: "center" }}
+        sx={{ display: "flex", justifyContent: "center", padding: '2rem' }}
       >
-        <img src={cisco} alt="cisco partner" />
+        <img width="100%" src={cisco} alt="cisco partner" />
       </Grid>
       <Grid
         item
-        xs={12}
+        xs={6}
         md={2}
-        sx={{ display: "flex", justifyContent: "center" }}
+        sx={{ display: "flex", justifyContent: "center", padding: '2rem' }}
       >
-        <img src={aws} alt="aws partner" />
+        <img width="100%" src={aws} alt="aws partner" />
       </Grid>
       <Grid
         item
-        xs={12}
+        xs={6}
         md={2}
-        sx={{ display: "flex", justifyContent: "center" }}
+        sx={{ display: "flex", justifyContent: "center", padding: '2rem' }}
       >
-        <img src={fortinet} alt="fortinet partner" />
+        <img width="100%" src={fortinet} alt="fortinet partner" />
       </Grid>
       <Grid
         item
-        xs={12}
+        xs={6}
         md={2}
-        sx={{ display: "flex", justifyContent: "center" }}
+        sx={{ display: "flex", justifyContent: "center", padding: '2rem' }}
       >
-        <img src={kaspersky} alt="kaspersky partner" />
+        <img width="100%" src={kaspersky} alt="kaspersky partner" />
       </Grid>
       <Grid
         item
-        xs={12}
+        xs={6}
         md={2}
-        sx={{ display: "flex", justifyContent: "center" }}
+        sx={{ display: "flex", justifyContent: "center", padding: '2rem' }}
       >
-        <img src={netlify} alt="netlify partner" />
+        <img width="100%" src={netlify} alt="netlify partner" />
       </Grid>
     </Grid>
   );

@@ -36,6 +36,7 @@ const MobNav = () => {
             height: 1500,
             justifyContent: "space-around",
             alignItems: "center",
+            paddingTop: '4rem'
           },
           position: "relative",
           display: "flex",
@@ -44,11 +45,11 @@ const MobNav = () => {
         <List
           sx={{
             width: "100%",
-            "& a": { textDecoration: "none", color: "text.white" },
+            "& a": { textDecoration: "none", color: "secondary.dark" },
           }}
         >
           {MenuItems?.map((item, index) => (
-            <HashLink to={`${item.link}`} smooth>
+            <HashLink to={`${item.link}`} smooth key={index}>
               <MenuItem
                 sx={{
                   justifyContent: "center",

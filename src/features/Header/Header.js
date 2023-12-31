@@ -80,7 +80,6 @@ const Header = ({ logo, isMobile }) => {
                   </ListItem>
                 ))}
                 <Button
-                component={Link}
                   variant="contained"
                   color="secondary"
                   size="medium"

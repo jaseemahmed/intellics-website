@@ -7,7 +7,8 @@ const Branding = ({ isMobile }) => {
     <Box
       sx={{
         "& img": {
-          width: isMobile ? "100%" : "100%",
+          width: "100%",
+          maxWidth: "100%",
         },
         backgroundColor: "#ffffff",
         minHeight: isMobile ? "auto" : "18rem",
@@ -15,7 +16,7 @@ const Branding = ({ isMobile }) => {
         padding: "1rem",
       }}
     >
-      <img src={logo} alt="logo" />
+      <img src={logo} alt="logo" width="100%" />
     </Box>
   );
 };

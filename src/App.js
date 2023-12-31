@@ -36,75 +36,76 @@ function App() {
   }, []);
 
   return (
-    <>
-      <main style={{ position: "relative" }}>
+    <main style={{ position: "relative" }}>
+      <Container
+        id="home"
+        maxWidth="100%"
+        sx={{
+          // padding: "0 !important",
+          backgroundColor: "primary.main",
+          backgroundImage: `url(${bgImg})`,
+          // backgroundSize: isMobileSmall
+          //   ? "200%"
+          //   : isMobile
+          //   ? "150%"
+          //   : "contain",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "bottom right",
+        }}
+      >
+        <Header isMobile={isMobile} />
+      </Container>
+      <Container sx={{ minHeight: "auto", padding: "6rem 1rem" }} id="about">
+        <About isMobile={isMobile} />
+      </Container>
+      <Container sx={{ minHeight: "auto", padding: "6rem 1rem" }} id="services">
+        <Services isMobile={isMobile} />
+      </Container>{" "}
+      <Container sx={{ minHeight: "auto", padding: "6rem 1rem" }}>
+        <Testimonial isMobile={isMobile} />
+      </Container>
+      <Container sx={{ minHeight: "auto", padding: "6rem 1rem" }}>
+        <Partners isMobile={isMobile} />
+      </Container>
+      <Container sx={{ minHeight: "auto", padding: "6rem 1rem" }} id="contact">
+        <FormBase isMobile={isMobile} />
+      </Container>
+      <Container
+        sx={{
+          minHeight: "auto",
+          backgroundColor: "secondary.main",
+          position: "absolute",
+          bottom: isMobile ? "-3%" : 0,
+          // zIndex: -1,
+          minHeight: "350px",
+        }}
+        maxWidth="100%"
+      >
         <Container
-          id="home"
-          maxWidth="100%"
-          sx={{
-            padding: "0 !important",
-            backgroundColor: "primary.main",
-            backgroundImage: `url(${bgImg})`,
-            backgroundSize: isMobileSmall
-              ? "200%"
-              : isMobile
-              ? "150%"
-              : "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "bottom right",
-          }}
+          
         >
-          <Header isMobile={isMobile} />
+          <Footer isMobile={isMobile} />
         </Container>
-        <Container sx={{ minHeight: "auto", padding: "6rem 0" }} id="about">
-          <About />
-        </Container>
-        <Container sx={{ minHeight: "auto", padding: "6rem 0" }} id="services">
-          <Services />
-        </Container>{" "}
-        <Container sx={{ minHeight: "auto", padding: "6rem 0" }}>
-          <Testimonial />
-        </Container>
-        <Container sx={{ minHeight: "auto", padding: "6rem 0" }}>
-          <Partners />
-        </Container>
-        <Container sx={{ minHeight: "auto", padding: "6rem 0" }} id="contact">
-          <FormBase />
-        </Container>
-        <Container
-          sx={{
-            minHeight: "auto",
-            backgroundColor: "secondary.main",
-            position: "absolute",
-            bottom: 0,
-            // zIndex: -1,
-            minHeight: "350px",
-          }}
-          maxWidth="100%"
-        >
-          <Container sx={{ minHeight: "auto" }}>
-            <Footer />
-          </Container>
-        </Container>
-        {!!showFab && (
-          <HashLink to="#home" smooth>
-            <Fab
-              component={motion.div}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 50 }}
-              transition={{ duration: 0.5 }}
-              size="small"
-              color="secondary"
-              aria-label="add"
-              sx={{ position: "fixed", bottom: "1rem", right: "1rem" }}
-            >
-              <ArrowUpwardIcon sx={{ color: "text.white" }} />
-            </Fab>
-          </HashLink>
-        )}
-      </main>
-    </>
+      </Container>
+      {!!showFab && (
+        <HashLink to="#home" smooth>
+          <Fab
+            component={motion.div}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
+            size="small"
+            color="secondary"
+            aria-label="add"
+            sx={{ position: "fixed", bottom: "3%", right: "1%" }}
+          >
+            <ArrowUpwardIcon sx={{ color: "text.white" }} />
+          </Fab>
+        </HashLink>
+      )}
+    </main>
   );
 }
 

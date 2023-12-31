@@ -2,13 +2,17 @@ import { Box, Grid, Typography } from "@mui/material";
 import { testimonialData } from "../../Constants/TestimonialData";
 import TestimonialSlider from "./TestimonialSlider";
 
-const Testimonial = () => {
+const Testimonial = ({ isMobile }) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid
         container
         spacing={2}
-        sx={{ alignItems: "flex-start", justifyContent: "space-between" }}
+        sx={{
+          alignItems: "flex-start",
+          justifyContent: "space-between",
+          flexDirection: !!isMobile ? "column-reverse" : "row",
+        }}
       >
         <Grid item xs={12} md={8}>
           <TestimonialSlider data={testimonialData} />
@@ -40,8 +44,8 @@ const Testimonial = () => {
               textTransform: "uppercase",
               fontWeight: "bold",
               opacity: ".15",
-              fontSize: {xs: '5rem', },
-              transform: "scale(1.2)",
+              fontSize: { xs: "5rem" },
+              transform: isMobile ? "scale(1)" : "scale(1.2)",
               marginBottom: "2rem",
             }}
             color="primary"

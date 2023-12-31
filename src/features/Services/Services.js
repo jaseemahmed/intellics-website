@@ -3,8 +3,9 @@ import React from "react";
 import ServiceCards from "./ServiceCards";
 
 import { services } from "../../Constants/Services";
+import { Scale } from "@mui/icons-material";
 
-const Services = () => {
+const Services = ({ isMobile }) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid
@@ -40,7 +41,7 @@ const Services = () => {
               fontWeight: "bold",
               opacity: ".15",
               fontSize: { xs: "5rem" },
-              transform: "scale(1.2)",
+              transform: isMobile ? "scale(1)" : "scale(1.2)",
               marginBottom: "2rem",
             }}
             color="primary"
