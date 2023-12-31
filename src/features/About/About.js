@@ -2,7 +2,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import AboutCards from "./AboutCards";
 
-const About = ({isMobile}) => {
+const About = ({ isMobile }) => {
   const features = [
     {
       title: "Embraces future technology",
@@ -22,7 +22,11 @@ const About = ({isMobile}) => {
       <Grid
         container
         spacing={2}
-        sx={{ alignItems: "flex-start", justifyContent: "space-between" }}
+        sx={{
+          alignItems: "flex-start",
+          justifyContent: "space-between",
+          flexDirection: !!isMobile ? "column-reverse" : "row",
+        }}
       >
         <Grid item xs={12} md={8}>
           <Grid container spacing={2}>
@@ -60,7 +64,7 @@ const About = ({isMobile}) => {
               textTransform: "uppercase",
               fontWeight: "bold",
               opacity: ".15",
-              fontSize: {xs: '5rem', },
+              fontSize: { xs: "5rem" },
               transform: isMobile ? "scale(1)" : "scale(1.2)",
               marginBottom: "2rem",
             }}
