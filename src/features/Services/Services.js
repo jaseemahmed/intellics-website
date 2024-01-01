@@ -48,7 +48,7 @@ const Services = ({ isMobile }) => {
           >
             DOES
           </Typography>
-          <Typography variant="body1" sx={{ textAlign: "justify" }}>
+          <Typography variant="body1" >
             We are dedicated to delivering innovative and tailored solutions to
             meet the diverse needs of our clients. Specializing in a wide range
             of services, we provide comprehensive IT solutions to drive business

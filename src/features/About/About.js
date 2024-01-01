@@ -72,7 +72,7 @@ const About = ({ isMobile }) => {
           >
             We
           </Typography>
-          <Typography variant="body1" sx={{ textAlign: "justify" }}>
+          <Typography variant="body1" >
             As a forward-thinking technology partner, we excel in delivering
             cutting-edge services spanning Cloud Solutions, Networking,
             Security, and IT Infrastructure. Our expertise extends to crafting

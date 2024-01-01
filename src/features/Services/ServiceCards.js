@@ -59,7 +59,7 @@ const ServiceCards = ({ image, icon, title, content }) => {
                 }}
               />
               <Box>
-                <Typography variant="body1" sx={{ textAlign: "justify" }}>
+                <Typography variant="body1" >
                   {content}
                 </Typography>
                 <Button

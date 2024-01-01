@@ -52,7 +52,7 @@ const Testimonial = ({ isMobile }) => {
           >
             Great
           </Typography>
-          <Typography variant="body1" sx={{ textAlign: "justify" }}>
+          <Typography variant="body1" >
             Discover what our clients are saying about their experiences with
             us. From innovative solutions to unparalleled customer service, our
             testimonials showcase the value we bring to businesses.

@@ -30,7 +30,7 @@ const AboutCards = ({ title, text }) => {
           >
             {title}
           </Typography>
-          <Typography variant="body1" sx={{ textAlign: "justify" }}>
+          <Typography variant="body1" >
             {text}
           </Typography>
         </Box>

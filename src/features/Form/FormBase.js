@@ -45,7 +45,7 @@ const FormBase = ({ isMobile }) => {
           >
             WORK
           </Typography>
-          <Typography variant="body1" sx={{ textAlign: "justify" }}>
+          <Typography variant="body1" >
             We, with our dedicated and committed team is always ready to help
             you with all your requirements.
           </Typography>
