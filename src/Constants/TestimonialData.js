@@ -6,9 +6,9 @@ export const testimonialData = [
   {
     image: picJaseem,
     altText: "jaseem-fazaa",
-    clientName: "Jaseem Ahammed",
-    position: "Senior Software Engineer",
-    company: "Fazaa",
+    clientName: "Mishal Ahammed",
+    position: "CEO",
+    company: "City box cargos",
     comment:
       "Intellics's robust infrastructure and responsive support have streamlined our operations and enhanced user experience. A strategic choice for any application hosting needs.",
   },
