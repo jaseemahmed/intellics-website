@@ -56,19 +56,31 @@ function App() {
       >
         <Header isMobile={isMobile} />
       </Container>
-      <Container sx={{ minHeight: "auto", padding: "6rem 1rem" }} id="about">
+      <Container
+        sx={{ minHeight: "auto", padding: "6rem 1rem" }}
+        id="about"
+        maxWidth="xl"
+      >
         <About isMobile={isMobile} />
       </Container>
-      <Container sx={{ minHeight: "auto", padding: "6rem 1rem" }} id="services">
+      <Container
+        sx={{ minHeight: "auto", padding: "6rem 1rem" }}
+        id="services"
+        maxWidth="xl"
+      >
         <Services isMobile={isMobile} />
       </Container>{" "}
-      <Container sx={{ minHeight: "auto", padding: "6rem 1rem" }}>
+      <Container sx={{ minHeight: "auto", padding: "6rem 1rem" }} maxWidth="xl">
         <Testimonial isMobile={isMobile} />
       </Container>
-      <Container sx={{ minHeight: "auto", padding: "6rem 1rem" }}>
+      <Container sx={{ minHeight: "auto", padding: "6rem 1rem" }} maxWidth="xl">
         <Partners isMobile={isMobile} />
       </Container>
-      <Container sx={{ minHeight: "auto", padding: "6rem 1rem" }} id="contact">
+      <Container
+        sx={{ minHeight: "auto", padding: "6rem 1rem" }}
+        id="contact"
+        maxWidth="xl"
+      >
         <FormBase isMobile={isMobile} />
       </Container>
       <Container
@@ -82,9 +94,7 @@ function App() {
         }}
         maxWidth="100%"
       >
-        <Container
-          
-        >
+        <Container maxWidth="xl">
           <Footer isMobile={isMobile} />
         </Container>
       </Container>
@@ -97,7 +107,7 @@ function App() {
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.5 }}
             size="small"
-            color="secondary"
+            color="primary"
             aria-label="add"
             sx={{ position: "fixed", bottom: "3%", right: "1%" }}
           >

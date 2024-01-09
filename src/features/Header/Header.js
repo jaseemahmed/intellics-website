@@ -25,7 +25,7 @@ import { HashLink } from "react-router-hash-link";
 const Header = ({ logo, isMobile }) => {
   return (
     <Container
-      // maxWidth="xl"
+      maxWidth="xl"
       sx={{
         display: "flex",
         flexDirection: "column",
