@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
 import React from "react";
 import AboutCards from "./AboutCards";
 
@@ -72,7 +72,7 @@ const About = ({ isMobile }) => {
           >
             We
           </Typography>
-          <Typography variant="body1" >
+          <Typography variant="body1">
             As a forward-thinking technology partner, we excel in delivering
             cutting-edge services spanning Cloud Solutions, Networking,
             Security, and IT Infrastructure. Our expertise extends to crafting

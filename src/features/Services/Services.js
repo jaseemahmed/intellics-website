@@ -13,7 +13,7 @@ const Services = ({ isMobile }) => {
         spacing={2}
         sx={{ alignItems: "flex-start", justifyContent: "space-between" }}
       >
-        <Grid item xs={12} md={3}>
+        <Grid item xs={12} md={6}>
           <Typography
             variant="h6"
             sx={{
@@ -41,14 +41,14 @@ const Services = ({ isMobile }) => {
               fontWeight: "bold",
               opacity: ".15",
               fontSize: { xs: "5rem" },
-              transform: isMobile ? "scale(1)" : "scale(1.2)",
+              // transform: isMobile ? "scale(1)" : "scale(1.2)",
               marginBottom: "2rem",
             }}
             color="primary"
           >
             DOES
           </Typography>
-          <Typography variant="body1" >
+          <Typography variant="body1">
             We are dedicated to delivering innovative and tailored solutions to
             meet the diverse needs of our clients. Specializing in a wide range
             of services, we provide comprehensive IT solutions to drive business
@@ -56,10 +56,10 @@ const Services = ({ isMobile }) => {
           </Typography>
         </Grid>
 
-        <Grid item xs={12} md={8}>
-          <Grid container>
+        <Grid item xs={12} md={12}>
+          <Grid container spacing={2}>
             {services.map((service, idx) => (
-              <Grid item xs={12} md={4} key={idx}>
+              <Grid item xs={12} md={4} key={idx} sx={{ display: "flex" }}>
                 <ServiceCards
                   image={service.image}
                   icon={service.icon}

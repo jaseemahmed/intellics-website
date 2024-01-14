@@ -1,5 +1,7 @@
 import {
   Box,
+  Card,
+  CardContent,
   Container,
   Fab,
   Grid,
@@ -20,6 +22,8 @@ import FormBase from "./features/Form/FormBase";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { HashLink } from "react-router-hash-link";
 import { motion } from "framer-motion";
+import visionImg from "../src/assets/images/vision.jpg";
+import missionImg from "../src/assets/images/mission.jpg";
 function App() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -64,12 +68,115 @@ function App() {
         <About isMobile={isMobile} />
       </Container>
       <Container
+        sx={{ minHeight: "auto", padding: "3rem 1rem" }}
+        id="services"
+        maxWidth="xl"
+      >
+        <Grid
+          container
+          spacing={2}
+          sx={{
+            marginTop: "1rem",
+            justifyContent: "center",
+          }}
+        >
+          <Grid item xs={12} md={4} sx={{ display: "flex" }}>
+            <Card
+              elevation={2}
+              sx={{
+                minHeight: "100px",
+                backgroundImage: `url(${visionImg})`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            >
+              <CardContent
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%",
+                }}
+              >
+                <Box
+                  sx={{
+                    backdropDilter: "blur(16px) saturate(180%)",
+                    backgroundColor: "rgba(88, 134, 70, 0.75)",
+                    borderRadius: "12px",
+                    border: "1px solid rgba(255, 255, 255, 0.125)",
+                    padding: "2rem",
+                    borderRadius: ".5rem",
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <Typography variant="h6" color="white" gutterBottom>
+                    Vision
+                  </Typography>
+                  <Typography variant="body1" color="white">
+                    Our vision is to seamlessly connect tomorrow's opportunities
+                    with today's innovations, fostering a digital landscape
+                    where every interaction is a step towards progress.
+                  </Typography>
+                  <Typography variant="body1" color="white">
+                    <br />
+                  </Typography>
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={4} sx={{ display: "flex" }}>
+            <Card
+              elevation={2}
+              sx={{
+                minHeight: "100px",
+                backgroundImage: `url(${missionImg})`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            >
+              <CardContent
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%",
+                }}
+              >
+                <Box
+                  sx={{
+                    backdropDilter: "blur(16px) saturate(180%)",
+                    backgroundColor: "rgba(88, 134, 70, 0.75)",
+                    borderRadius: "12px",
+                    border: "1px solid rgba(255, 255, 255, 0.125)",
+                    padding: "2rem",
+                    borderRadius: ".5rem",
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <Typography variant="h6" color="white" gutterBottom>
+                    Mission
+                  </Typography>
+                  <Typography variant="body1" color="white">
+                    We are committed to providing tailored and innovative
+                    solutions that elevate operational efficiency, enhance
+                    digital presence, and ensure the security and growth of our
+                    clients in an ever-evolving technological landscape.
+                  </Typography>
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      </Container>
+      <Container
         sx={{ minHeight: "auto", padding: "6rem 1rem" }}
         id="services"
         maxWidth="xl"
       >
         <Services isMobile={isMobile} />
-      </Container>{" "}
+      </Container>
       <Container sx={{ minHeight: "auto", padding: "6rem 1rem" }} maxWidth="xl">
         <Testimonial isMobile={isMobile} />
       </Container>

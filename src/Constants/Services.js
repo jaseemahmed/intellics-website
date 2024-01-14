@@ -4,30 +4,30 @@ import security from "../assets/images/security.jpg";
 import infra from "../assets/images/infras.jpg";
 import code from "../assets/images/code.jpg";
 import itsales from "../assets/images/itsales.jpg";
-import CloudIcon from "@mui/icons-material/Cloud";
-import SettingsInputHdmiIcon from "@mui/icons-material/SettingsInputHdmi";
-import ShieldIcon from "@mui/icons-material/Shield";
+import CloudQueueIcon from '@mui/icons-material/CloudQueue';
+import CableIcon from '@mui/icons-material/Cable';
+import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined';
 import SettingsInputAntennaIcon from "@mui/icons-material/SettingsInputAntenna";
 import CodeIcon from "@mui/icons-material/Code";
 import ComputerIcon from "@mui/icons-material/Computer";
 export const services = [
   {
     image: cloudServices,
-    icon: <CloudIcon />,
+    icon: <CloudQueueIcon />,
     title: "CLOUD SOLUTIONS",
     content:
       "Revolutionize your business with our cloud solutions. Seamlessly scale your operations, enhance collaboration, and ensure data security with our cutting-edge cloud services. Experience the agility and flexibility needed to thrive in today's dynamic digital landscape, all backed by our commitment to excellence.",
   },
   {
     image: networking,
-    icon: <SettingsInputHdmiIcon />,
+    icon: <CableIcon />,
     title: "NETWORKING & CABLING SOLUTIONS",
     content:
       "From robust infrastructure design to efficient cable management, we tailor solutions that ensure seamless communication and high-performance networking. Experience reliability and speed with our expertly crafted solutions designed to meet the demands of your evolving business environment.",
   },
   {
     image: security,
-    icon: <ShieldIcon />,
+    icon: <GppGoodOutlinedIcon />,
     title: "SECURITY SOLUTIONS",
     content:
       "Protect your digital assets with our Security Solutions. We offer comprehensive and cutting-edge security measures to safeguard your data, networks, and operations. From threat detection to risk mitigation, our solutions ensure a secure digital environment, allowing you to focus on your core business with confidence.",
