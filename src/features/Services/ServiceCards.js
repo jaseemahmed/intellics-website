@@ -15,9 +15,22 @@ import React, { useState } from "react";
 const ServiceCards = ({ image, icon, title, content }) => {
   const [isHover, setIsHover] = useState(false);
   return (
-    <Card sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
+    <Card
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100%",
+        position: "relative",
+        "&:hover": {
+          ".MuiCardMedia-root": {
+            transform: "scale(1.1)",
+            transition: ".5s ease",
+          },
+        },
+      }}
+    >
       <CardMedia component="img" image={image} />
-      <CardContent sx={{ flex: 1, padding: '2rem' }}>
+      <CardContent sx={{ flex: 1, padding: "2rem" }}>
         <Typography color="primary" gutterBottom>
           {icon}
         </Typography>
@@ -28,8 +41,8 @@ const ServiceCards = ({ image, icon, title, content }) => {
           {content}
         </Typography>
       </CardContent>
-      <CardActions sx={{padding: '2rem'}}>
-        <Button size="medium" color="secondary" variant="contained" >
+      <CardActions sx={{ padding: "2rem" }}>
+        <Button size="medium" color="secondary" variant="contained">
           Enquire now
         </Button>
       </CardActions>

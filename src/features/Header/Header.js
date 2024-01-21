@@ -21,6 +21,7 @@ import { MenuItems } from "../../Constants/MenuItems";
 import MobNav from "./MobNav";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { HashLink } from "react-router-hash-link";
+import { motion } from "framer-motion";
 
 const Header = ({ logo, isMobile }) => {
   return (
@@ -83,9 +84,13 @@ const Header = ({ logo, isMobile }) => {
                   variant="contained"
                   color="secondary"
                   size="medium"
-                  sx={{ borderRadius: "100px", marginLeft: "2rem", "& a": { textDecoration: "none", color: "text.white" } }}
+                  sx={{
+                    borderRadius: "100px",
+                    marginLeft: "2rem",
+                    "& a": { textDecoration: "none", color: "text.white" },
+                  }}
                 >
-                  <HashLink to='#contact' smooth>
+                  <HashLink to="#contact" smooth>
                     Enquire now
                   </HashLink>
                 </Button>
@@ -96,19 +101,39 @@ const Header = ({ logo, isMobile }) => {
       </AppBar>
       <Grid container>
         <Grid item md={6} sm={6} xs={12} sx={{ padding: "3rem 0" }}>
-          <Typography
-            variant="h1"
-            sx={{ fontSize: "38px", textTransform: "uppercase" }}
-            gutterBottom
-            color="text.white"
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
           >
-            Crafting Tomorrow's <br />
-            Technology Today
-          </Typography>
-          <Typography variant="body1" gutterBottom color="text.white">
-            Embrace innovation and stay ahead in the ever-evolving digital
-            landscape with our pioneering IT solutions
-          </Typography>
+            <Typography
+              variant="h1"
+              sx={{ fontSize: "38px", textTransform: "uppercase" }}
+              gutterBottom
+              color="text.white"
+            >
+              Crafting Tomorrow's <br />
+              Technology Today
+            </Typography>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Typography variant="body1" gutterBottom color="text.white">
+              Embrace innovation and stay ahead in the ever-evolving digital
+              landscape with our pioneering IT solutions
+            </Typography>
+          </motion.div>
         </Grid>
       </Grid>
       <Grid container>

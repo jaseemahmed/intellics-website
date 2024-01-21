@@ -2,6 +2,7 @@ import {
   Box,
   Card,
   CardContent,
+  CardMedia,
   Container,
   Fab,
   Grid,
@@ -21,9 +22,10 @@ import Footer from "./features/Footer/Footer";
 import FormBase from "./features/Form/FormBase";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { HashLink } from "react-router-hash-link";
-import { motion } from "framer-motion";
+import { motion, transform } from "framer-motion";
 import visionImg from "../src/assets/images/vision.jpg";
 import missionImg from "../src/assets/images/mission.jpg";
+import { Scale } from "@mui/icons-material";
 function App() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -84,23 +86,34 @@ function App() {
             <Card
               elevation={2}
               sx={{
-                minHeight: "100px",
-                backgroundImage: `url(${visionImg})`,
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
+                position: "relative",
+                "&:hover": {
+                  ".MuiCardMedia-root": {
+                    transform: "scale(1.2)",
+                    transition: ".5s ease",
+                  },
+                },
               }}
             >
+              <CardMedia
+                component="img"
+                height="auto"
+                image={visionImg}
+                alt="vision"
+              />
               <CardContent
                 sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  height: "100%",
+                  position: "absolute",
+                  top: 0,
+                  bottom: 0,
                 }}
               >
                 <Box
                   sx={{
-                    backdropDilter: "blur(16px) saturate(180%)",
+                    backdropFilter: "blur(3px) ",
                     backgroundColor: "rgba(88, 134, 70, 0.75)",
                     borderRadius: "12px",
                     border: "1px solid rgba(255, 255, 255, 0.125)",
@@ -129,23 +142,34 @@ function App() {
             <Card
               elevation={2}
               sx={{
-                minHeight: "100px",
-                backgroundImage: `url(${missionImg})`,
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
+                position: "relative",
+                "&:hover": {
+                  ".MuiCardMedia-root": {
+                    transform: "scale(1.2)",
+                    transition: ".5s ease",
+                  },
+                },
               }}
             >
+              <CardMedia
+                component="img"
+                height="auto"
+                image={missionImg}
+                alt="vision"
+              />
               <CardContent
                 sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  height: "100%",
+                  position: "absolute",
+                  top: 0,
+                  bottom: 0,
                 }}
               >
                 <Box
                   sx={{
-                    backdropDilter: "blur(16px) saturate(180%)",
+                    backdropFilter: "blur(3px) ",
                     backgroundColor: "rgba(88, 134, 70, 0.75)",
                     borderRadius: "12px",
                     border: "1px solid rgba(255, 255, 255, 0.125)",
@@ -163,6 +187,9 @@ function App() {
                     solutions that elevate operational efficiency, enhance
                     digital presence, and ensure the security and growth of our
                     clients in an ever-evolving technological landscape.
+                  </Typography>
+                  <Typography variant="body1" color="white">
+                    <br />
                   </Typography>
                 </Box>
               </CardContent>
