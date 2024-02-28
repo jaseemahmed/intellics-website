@@ -126,7 +126,7 @@ const Partners = ({ isMobile }) => {
             // </Card>
             <Box sx={{ padding: isMobile ? "1rem" : '3rem' }}>
               <motion.img
-                whileHover={{
+                whileHover={{ 
                   filter: "grayscale(0)",
                   scale: "1.1",
                   transition: {
